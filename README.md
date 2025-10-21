@@ -36,7 +36,6 @@ Requirements:
 🧩 4. Baseline Implementations
 Each baseline model is implemented as a separate Python file for fair and modular comparison.
 
-File Name	Description:
 - BPRMF Baseline.py:	Implements Bayesian Personalized Ranking Matrix Factorization – collaborative filtering baseline.
 - LightGCN Baseline.py:	Graph-based collaborative model using simplified GCN layers for recommendations.
 - AE Baseline.py: AutoEncoder-based collaborative filtering baseline.
@@ -45,3 +44,27 @@ File Name	Description:
 - SVV Baseline.py: Implements Shapley Value-driven Valuation (SVV) for noise pruning and robustness.
 - ABSA-BERT Baseline.py: Performs Aspect-Based Sentiment Analysis using BERT to extract fine-grained sentiment embeddings.
 - SVV and ABSA-BERT Baseline.py:	Final hybrid model (ours) combining both SVV and ABSA-BERT for robust and explainable recommendations.
+
+Run Baselines: 
+- python "BPRMF Baseline.py"
+- python "LightGCN Baseline.py"
+- python "AE Baseline.py"
+- python "DAE Baseline.py"
+- python "DeepCoNN Baseline.py"
+- python "SVV Baseline.py"
+- python "ABSA-BERT Baseline.py"
+- python "SVV and ABSA-BERT Baseline.py"
+
+Each script:
+- Loads the dataset
+- Trains the model
+- Evaluates using Recall@K, NDCG@K, AUC, RMSE
+- ...
+  
+📊 5. Evaluation Metrics
+- Recall@K: Measures how many relevant items appear in the top-K recommendations.
+- NDCG@K: Evaluates the ranking quality and order of recommendations.
+- MRR@K: Measures ranking accuracy using the first relevant item.
+- Accuracy@K: Fraction of correctly predicted items within top-K.
+- AUC: Measures model discrimination between positive and negative samples.
+- RMSE: Measures deviation between predicted and true ratings (lower is better).
